@@ -1,0 +1,37 @@
+name: Epic
+description: A large outcome that spans several sprints and/or repos. Broken down into sub-issues.
+type: Epic
+projects: ["consigproprio/1"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Epics live in **consigproprio-product**. After creating it, add the work as **sub-issues** (Features, Tasks) in the right repos,
+        and set **Start date** / **Target date** in the sidebar so it shows on the Roadmap.
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal / outcome
+      description: What changes for the business or the user when this is done?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      placeholder: |
+        In scope:
+        - …
+        Out of scope:
+        - …
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: How do we know it worked?
+      description: Metrics, acceptance by the client, regulatory sign-off, etc.
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks, dependencies, open questions

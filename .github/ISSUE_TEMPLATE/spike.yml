@@ -1,0 +1,30 @@
+name: Spike
+description: Time-boxed research to answer a question or reduce uncertainty before estimating.
+type: Spike
+projects: ["consigproprio/1"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question to answer
+      placeholder: Can we … ? Which option is better for … ?
+    validations:
+      required: true
+  - type: dropdown
+    id: timebox
+    attributes:
+      label: Time box
+      options:
+        - Half a day
+        - 1 day
+        - 2 days
+        - 3 days (max)
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Expected output
+      description: A recommendation comment, a short doc, a proof of concept, follow-up issues…
+    validations:
+      required: true

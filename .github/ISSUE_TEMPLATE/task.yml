@@ -1,0 +1,25 @@
+name: Task
+description: A technical piece of work — usually a sub-issue of a Feature, or tech debt / chores.
+type: Task
+projects: ["consigproprio/1"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What needs to be done?
+    validations:
+      required: true
+  - type: textarea
+    id: done-when
+    attributes:
+      label: Done when
+      placeholder: |
+        - [ ] …
+        - [ ] Tests added/updated
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Technical notes
+      description: Approach, affected modules, migrations, links.

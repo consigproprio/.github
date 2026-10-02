@@ -1,0 +1,44 @@
+name: Feature / user story
+description: A user-facing capability, written as a user story with acceptance criteria.
+type: Feature
+projects: ["consigproprio/1"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the **need**, not the implementation. Technical work goes in **sub-issues** (type *Task*) in the repo where the code changes.
+        Do **not** paste real personal data (CPF, names, salaries) or secrets — use fake examples.
+  - type: textarea
+    id: story
+    attributes:
+      label: User story
+      description: As a <role>, I want <capability>, so that <benefit>.
+      placeholder: As a credit analyst, I want to …, so that …
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Testable conditions. "Given / When / Then" works well.
+      placeholder: |
+        - [ ] Given …, when …, then …
+        - [ ] Given …, when …, then …
+    validations:
+      required: true
+  - type: dropdown
+    id: personal-data
+    attributes:
+      label: Does this read, store or expose personal or financial data?
+      description: If yes, it gets the `compliance` label during refinement (LGPD).
+      options:
+        - "No"
+        - "Yes"
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context, links, mockups
+      description: Why now? Related issues, screenshots, designs, business rules.

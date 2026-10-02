@@ -1,0 +1,2 @@
+# Force every issue through a form, so it gets a type and lands in the project.
+blank_issues_enabled: false

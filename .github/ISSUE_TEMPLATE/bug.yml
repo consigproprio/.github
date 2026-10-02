@@ -1,0 +1,59 @@
+name: Bug
+description: Something is broken or behaves differently from what was agreed.
+type: Bug
+projects: ["consigproprio/1"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Open the bug in the repo where you believe the problem is (api, web or infra). If you're not sure, open it in **consigproprio-product** and the team will move it.
+        Do **not** paste real personal data (CPF, names, salaries), tokens or passwords — redact them.
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Log in as …
+        2. Go to …
+        3. Click …
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - Production
+        - Staging
+        - Local
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      description: The Product Owner sets the final Priority during triage.
+      options:
+        - Blocks users / wrong financial values / data exposure
+        - Major feature broken, workaround exists
+        - Minor / cosmetic
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, screenshots, request IDs
+      description: Redact personal data before pasting.
+      render: shell
